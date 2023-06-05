@@ -1,0 +1,11 @@
+- hosts: all
+#  remote_user: 
+  become: yes
+
+  collections: 
+   - devsec.hardening
+  roles:
+   - ssh_hardening
+#  vars:
+#   - ssh_server_ports: 
+#      - 7777

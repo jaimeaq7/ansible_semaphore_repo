@@ -1,0 +1,13 @@
+---
+- hosts: all
+#  remote_user: 
+  become: true
+
+  tasks:
+    - name: update and upgrade
+      become: true
+#      become_user: 
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 86400
